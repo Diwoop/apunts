@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apunts JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="styledos.css">
+</head>
+<body>
+  <h1>Apunts JavaScript</h1>
+  <nav class="index" id="index">
+    <ul>
+        <li><a href="#methods">Methods</a></li>
+        <li><a href="#buildin">Build-in Objects</a></li>
+        <li><a href="#variables">Variables</a></li>
+        <li><a href="#typof">Typof operator</a></li>
+        <li><a href="#cond-stat">Conditional statments</a></li>
+        <li><a href="#tern-oper">Ternary operators</a></li>
+        <li><a href="#logic-oper">Logical operators</a></li>
+        <li><a href="#function-dec">Function declaration</a>
+            <ul class="subapartats">
+                <li><a href="#param-arg">Parameters and Arguments</a></li>
+                <li><a href="#def-param">Default parameters</a></li>
+                <li><a href="#return">Return</a></li>
+                <li><a href="#help-function">Helper functions</a></li>
+                <li><a href="#funtion-exp">Function Expressions</a></li>
+            </ul>
+        </li>
+        <li><a href="#arrow-funct">Arrow functions</a></li>
+        <li><a href="#scoop">Block Scoop</a></li>
+        <li><a href="#arrays">Arrays</a>
+            <ul class="subapartats">
+                <li><a href="#upd-element">Update elements</a></li>
+                <li><a href="#arrays-let-const">Arrays with let and const</a></li>
+                <li><a href="#arrays-meth">Array's methods</a></li>
+                <li><a href="#arrays-funct">Arrays and functions</a></li>
+                <li><a href="#nest">Nested arrays</a></li>
+            </ul>
+        </li>
+        <li><a href="#"></a>Loops
+            <ul class="subapartats">
+                <li><a href="#for-lop">he For loop</a></li>
+                <li><a href="#revers-lop">Looping in reverse</a></li>
+                <li><a href="#lop-arrays">Looping through arrays</a></li>
+                <li><a href="#nested-lop">Nested loops</a></li>
+                <li><a href="#while-lop">The while loop</a></li>
+                <li><a href="#dowhi-stat">Do...While statments</a></li>
+                <li><a href="#break">The Break keyword</a></li>
+            </ul>
+        </li>
+        <li><a href="#high-funtions">High order functions</a></li>
+    </ul>
+</nav>
+  <br>
+  <h2 id="methods"><a href="#index">Methods</a>:</h2>
+  
+  <p>- La formula <span class=nomenc >.toUpperCase()</span> fa que s'imprimeixi tot amb majúscules:</p>
+  <img src = "Imatges/fjavascript/img1.jpg" id=img1 alt="img1.jpg">
+  <br>
+
+  <p>- La formula <span class=nomenc>.trim()</span>serveix per treure espais innecessaris</p>
+  <img src = "Imatges/fjavascript/img2.jpg" id="img2" alt="img2.jpg">
+  <br>
+
+  <h2 id="buildin"><a href="#index">Build-in Objects:</a></h2>
+    <p>- <span class=nomenc>console.log(Math.random())</span> imprimeix un numero random entre 0 i 1 tenint en compte el 0 i tots els decimals.</p>
+    <img src = "Imatges/fjavascript/img3.jpg" id="img3" alt="img3">
+    <p>- Si volguessim que només tinguès en compte els números sencers, hauriem d'aplicar la formula: <span class=nomenc>Math.floor(Math.random())</span>.
+        per tant <span class=nomenc> console.log(Math.floor(Math.random()))</span> imprimeix o el 0 o el 1</p>
+    <img src = "Imatges/fjavascript/img4.jpg" id = "img4" alt="img4.jpg">
+    <p>- <span class=nomenc>console.log(Math.floor(Math.random()*50))</span> imprimeix un número random sencer entre el 0 i el 50.</p>
+    <img src ="Imatges/fjavascript/img5.jpg" id = "img5" alt="img5">
+    <p>- <span class=nomenc>console.log(Math.ceil())</span> serveix per imprimir un número decimal arrodonit.</p>
+    <img src ="Imatges/fjavascript/img6.jpg" id = "img6" alt="img6">
+    <p>- <span class=nomenc>Number.isInteger()</span> serveix per saber si un número es sencer o no.</p>
+    <img src ="Imatges/fjavascript/img7.jpg" id = "img7" alt="img7">
+    <br>
+
+<h2 id="variables"><a href="#index">Variables:</a></h2>
+<p>- <span class=nomenc2>let</span> és per indicar que és una variable es a dir es pot reasignar el valor</p>
+<p>- <span class=nomenc2>const</span> és per indicar una constant es a dir el seu valor no es pot reasignar</p>
+<img src = "Imatges/fjavascript/img8.jpg" class="img8nd9" alt="img8">
+<img src = "Imatges/fjavascript/img9.jpg" class="img8nd9" alt="img9">
+<p>- Per poder crar una frase amb variables es fa de la següent manera <span class=nomenc> console.log(`El meu nom és ${nom} i la meva ciutat
+    és ${ciutat}`).</span>per a fer-ho en comptes d'utilitzar cometes, s'han d'utilitzar accents oberts i els dos han de ser el mateix.</p>
+<img src = "Imatges/fjavascript/img10.jpg" id="img10" alt="img10">
+<br>
+
+<h2 id="typof"><a href="#index">typof operator</a></h2>
+<p>- <span class=nomenc>typof ()</span> serveix per saber el tipu de variable que és: number, string o boorean</p>
+<img src = "Imatges/fjavascript/img11.jpg" class="block2" alt="img11">
+<img src = "Imatges/fjavascript/img12.jpg" class="block2" alt="img12">
+<img src = "Imatges/fjavascript/img13.jpg" class="block2" alt="img13">
+<p>Hem de tenir en compte que quan volem crear una variable boorean no s'han de posar cometes abans ni despres de la paraula -true- o -false-.</p>
+<br>
+
+<h2 id="cond-stat"><a href="#index">Conditional statements</a></h2>
+<p>- Els condicionals serveixen per fer que l'ordinador imprimeixi certs valors tenint en compte el resultats de les variables. Per fer-ho
+     s'utilitza <span class=nomenc2>if ...  else</span> per a marcar les diferents opcions.</p>
+<img src="Imatges/fjavascript/img14.jpg" id="img14" alt="img14">
+<p>- Hem de saber els símbols que s'utilitzen i com utilitzar-los correctament:</p>
+<img src="Imatges/fjavascript/img15.jpg" id="img15" alt="img15">
+<p>- Quan volem que l'ordinador tingui en compte més de dues variables ho expressem d'aquesta manera:</p>
+<img src="Imatges/fjavascript/img16.jpg" id="img16" alt="img16">
+<p>Si canviessim la variable a <span class=nomenc2> let dia = 'Nit'</span> el que es veuria imprès seria <span class=nomenc3>Sopar</span>.</p>
+<p>- Quan tenim moltes variables en comptes d'utilitzar la nomenclatura <span class=nomenc2>if...else</span> utilitzem la nomenclatura <span 
+class=nomenc2>switch</span>.</p>
+<img src="Imatges/fjavascript/img17.jpg" id="img17" alt="img17">
+<p>Aquest mètode ha de tenir l'ultima opció amb el nom <span class=nomenc2>default</span>.</p>
+<br>
+
+<h2 id="tern-oper"><a href="#index">Ternary operator</a></h2>
+<p>- Per fer el text de <span class=nomenc2>if...else</span> més curt podem utilitzar la següent formula per escriure-ho:</p>
+<img src="Imatges/fjavascript/img18.jpg" class="block3" alt="img18">
+<img src="Imatges/fjavascript/img19.jpg" class="block3" alt="img19">
+<p>A la primera imatge podem veure que utilitzem les variables boolean per tal de reduir encara més el text però a la segona imatge 
+    podem veure que es pot utilitzar amb variables de frases també.</p>
+<br>
+
+<h2 id="logic-oper"><a href="#index">Logical operators</a></h2>
+<p>Els <span class=nomenc>logical operators</span> serveixen per a tenir en compte diferents valors sobre una mateixa variable.</p>
+<img src="Imatges/fjavascript/img20.jpg" id="img20" alt="img20">
+<p>- En els operadors <span class=nomenc>and (&&)</span> les dues condicions han d'evaluar <span class=nomenc>true</span> per a què
+imprimeixi l'opcio de <span class=nomenc>Pots passar!</span> si en canvi, una de les opcions no coincideix imprimirà l'altre.</p>
+<img src="Imatges/fjavascript/img21.jpg" class="block4" alt="img21">
+<img src="Imatges/fjavascript/img22.jpg" class="block4" alt="img22">
+<p>- L'operador <span class=nomenc>or (||)</span> només ha d'avaluar una de les respostes com a <span class=nomenc>true</span> per a imprimir 
+    la resposta: <span class="nomenc">Pots passar!</span>.</p>
+<img src="Imatges/fjavascript/img23.jpg" id="img23" alt="img23">
+<p>- L'operador <span class=nomenc>not</span> o <span class=nomenc>bang (!)</span> reverteix el valor de la variable.</p> 
+<img src="Imatges/fjavascript/img24.jpg" id="img24" alt="img24">
+<br>
+<h2 id="function-dec"><a href="#index"></a>Function Declaration</h2>
+<img src="Imatges/fjavascript/img25.jpg" id="img25" alt="img25">
+<p>Una function declaration consta de:</p>
+<p>~ La paraula que indica el que volem fer: <span class=nomenc>function.</span></p>
+<p>~ El nom de la funció o el <span class="nomenc">identificador</span>, seguit de parèntesis.</p>
+<p>~ I el cos o <span class=nomenc>body</span> de la funció, que és tot el que va darrere de 
+<span class=nomenc>{}</span>.</p>
+<p>Hem de tenir en compte que es veuria escrit aixi: <span class=nomenc>function identFuncio()</span>, sense cap punt entre el nom i l'identificador</p>
+<img src="Imatges/fjavascript/img26.jpg" id="img26" alt="img26">
+<p>Per a que l'ordinador ens reconegui la funció i imprimeixi el resultat, haurem de citar-la primer escribint abans de la funció 
+<span class=nomenc> identFunció()</span>. Com més vegades citem la funció, més vegades imprimirà el <span class=nomenc>body</span> d'aquesta.</p>
+<img src="Imatges/fjavascript/img27.jpg" id="img27" alt="img27">
+
+<h3 id="param-arg"><a href="#index">Parameters and Arguments</a></h3>
+<p>Algunes funcions poden rebre imputs i utilitzar-les per relitzar alguna tasca
+<p><span class=nomenc> function calcularAreaRec(llargada, altura){llargada * altura}</span> </p>
+<p>L'imput que li estem donant és que calculi l'area d'un rectangle <span class=nomenc>llargada </span> i <span class=nomenc>altura</span>
+ actuen com a dos variables normals, és a dir actuaran com a dos valors que es multiplicarán. Al actuar com a dos variables normals
+ els hi haurem <span class=nomenc>d'assignar</span> un número a cada una:</p>
+<p><span class=nomenc>calcularAreaRec(10,6)</span></p>
+<p>En aquest cas les declararem així en comptes d'utilitzar la nomenclatura "let". Hem de tenir en compte que els valors que volem assignar a 
+cada variable ha de coincidir en l'ordre que els posem. Per tant en aquest cas <span class=nomenc>llargada = 10</span> i 
+<span class=nomenc>altura = 6</span>. Aquesta manera de citar és el que se'n diu <span class=nomenc>argument</span>.</p>
+<img src="Imatges/fjavascript/img29.jpg" class="block5" alt="img29">
+<img src="Imatges/fjavascript/img28.jpg" class="block5" alt="img28">
+
+<h3 id="def-param"><a href="#index">Default parameters</a></h3>
+<p>- Els parametres default serveixen per a indicar al ordinador què imprimir en cas que no es defineixi l'argument. S'escriuria de la següent
+    manera:</p>
+<p><span class=nomenc>function salutacio(nom='Desconegut'){console.log(`Hola, ${nom}!`)}</span></p>
+<img src="Imatges/fjavascript/img30.jpg" id="img30" alt="img30">
+<p>Podem veure que no ha calgut crear cap argument per nombrar els items. Però si definissim una de les variables es veuria així:</p>
+<img src="Imatges/fjavascript/img31.jpg" id="img31" alt="img31">
+<p>La primera variable ha canviat.</p>
+
+<h3 id="return"><a href="#index">Return</a></h3>
+<p>La funció return serveix per a varies accions:</p>
+<p>- <span class=nomenc>Retornar un valor</span>: Pot processar dades (que poden ser proporcionades com a arguments/paràmetres) i desprès 
+utilitzar el <span class=nomenc>return</span> per a que retorni el resultat.</p>
+<p>- <span class=nomenc>Finalitzar la funció</span>: Quan una funció es troba una instrucció <span class=nomenc>return</span> para la seva 
+execcució i surt de la funció. Significa que qualsevol codi després de la instrucció return no serà llegit.</p>
+<p>- <span class=nomenc>Emmagatzemar dades</span>: El valor que retorna una funció pot ser emmagatzemat en una variable per un ús posterior.</p>
+<img src="Imatges/fjavascript/img32.jpg" id="img32" alt="img32">
+<p>La variable <span class=nomenc>resultat</span> pot ser guardada per un ús posterior.</p>
+
+<h3 id="help-function"><a href="#index">Helper functions</a></h3>
+<p>Les utilitzem per dur a terme tasques específiques dins de tasques o funcions més grans, són útils per varies raons:</p>
+<p>- <span class=nomenc>Modularitat</span>: al dividir tasques grans i complexes en varies tasques més específiques, el codi es torna 
+modular i per tant més fàcil de llegir i de solucionar possibles errors.</p>
+<p>- <span class=nomenc>Facilita les proves</span>: les funcions expecialitzades són més fàcils de posar a prova i comprobar que el codi
+estigui funcionant.</p>
+<p>- <span class=nomenc>Extracció</span>: permeten extreure petits detalls de la funció principal i que la programadora només hagi de concentrar-se 
+en la lògica principal sense preocupar-se massa dels detalls d'implementació.</p>
+<img src="Imatges/fjavascript/img33.jpg" id="img33" alt="img33">
+<p>Podem veure que la funció principal ha fet càlculs a través de la funció auxiliar.</p>
+
+<h3 id="funtion-exp"><a href="#index">Function expressions</a></h3>
+<p>És una altre manera de deifinir una funció. Per definir una funció dins d'una expressió, normalment es fa dins una variable, es veuria aixi:</p>
+<p><span class="nomenc"> const mevaFuncio = function (){</span></p>
+<p><span class="nomenc">}</span></p>
+<img src="Imatges/fjavascript/img35.jpg" class="block6" id="img35" alt="img35">
+<img src="Imatges/fjavascript/img34.jpg" class="block6" alt="img34">
+<p>Per fer-la:</p>
+<p>1. <span class=nomenc>Declarar una cosntant</span> amb el <span class=nomenc>nom de la funció</span>. En aquest cas<span class=nomenc>
+    calcularAreaRect</span> i <span class=nomenc>plantesNecAigua</span>.</p>
+<p>2. <span class=nomenc>Assignar</span> com a valor de la variable una funció anònima (<span class=nomenc> function </span>) 
+seguida d'un conjunt de parèntesis amb possibles paràmetres i un conjunt de claus que contenen el cos de la funció. En aquest cas <span class=nomenc>
+function (base,altura) {}</span> / <span class=nomenc>function (dia){}</span>.</p>
+<p>Podem veure que és molt més útil en el cas de calcular l'area del rectangle, ja que gràcies a l'expressió de funció ens estalviem repetir
+    els calculs per a pròximes vegades.</p>
+<br>
+
+
+<h2 id="arrow-funct"><a href="#index">Arrow functions</a></h2>
+<p>- Es una manera més curta d'escriure una expressió de funció, es fa utilitzant la <span>"fat arrow"</span>:</p>
+<p><span class="=nomenc"> => {}</span></p>
+<p>evita que cada cop que fem una expressió de funció hagim d'escriure la paraula <span class="nomenc">function</span>. Per tant, tenint en compte 
+l'exemple anterior, es veuria així:</p>
+<p><span class="nomenc">const = calcularAreaRect = (base,altura) => {return base * altrua}</span></p>
+
+<h3>Concise arrow functions</h3>
+<p>- Serveixen per a reduir encara més les funcions de fletxa. Les fucnions que tenen un sol paràmetre no els hi calen els parèntesis:</p>
+<p><span class=nomenc>const num = 1 => {..}</span></p>
+<p>En canvi si una funció no té paràmetre o en té més d'un, si que s'han de posar els parèntesis.</p>
+<p>- Un cos de funció compost en una sola línea no necesita <span class=nomenc>'{}'</span> ja que l'acció <span class=nomenc>return</span> 
+està implicita.</p>
+<p><span class=nomenc> const suma = (a, b) => a + b </span></p>
+<p><span class=nomenc> const plantesNecAigua = dia  => 'dimecres' ? true : false </span></p>
+<img src="Imatges/fjavascript/img39.jpg" id="img39" alt="img39">
+<br>
+
+<h2 id="scoop"><a href="#index">Block scoop</a></h2>
+<p>És fundamental per mantenir el codi ordenat, ja que les variables que estiguin dins el body del block <span class=nomenc>{}</span> només podràn
+ser modificades des del mateix block. Per tant evitarem  que futures accions puguin actuar sobre aquesta variable i canviar-la.</p>
+<img src="Imatges/fjavascript/img36.jpg" class="block6" alt="img36">
+<img src="Imatges/fjavascript/img37.jpg" class="block6" alt="img37">
+<p>Podem veure que imprimeix dos valors diferents per la mateixa variable, ja que un dels <span class="nomenc">console.log()</span>agafa el que 
+està dins el block i l'altre no.</p>
+<p>En el cas de fer una funció amb <span class="nomenc">fat arrow</span>, per tal de que s'imprimeixi el console.log() de dins la funció 
+s'ha de <span class=nomenc>call</span> o citar, la funció: <span class="nomenc">imprimeixFruita()</span>.</p>
+<br>
+<p>Per escriure el codi de manera correcte ho hem de fer així:</p>
+<img src="Imatges/fjavascript/img38.jpg" id="img38" alt="img38">
+<p>Podem veure que totes les variables están dins algun block i que per tant només actuen dins a aquest, fent així que el valor d'aquestes
+    no es pugui modificar per error i per tant fer que el codi funcioni malament.</p>
+<br>
+<h2 id="arrays"><a href="#index">Arrays</a></h2>
+<p>- És una estructura de dades que ens permet emmagatzemar múltiples valors en una sola variable. És una llista amb diferents valors, que 
+poden ser: número, cadenes de text, objectes i altres arrays. Un array es deifneix amb <span class=nomenc>[]</span> i els seus elements 
+es separen amb comes:</p>
+<p><span class=nomenc2>let fruites</span><span class=nomenc> = ['maduixes','síndria','meló']</span></p>
+<p>- L'estructura array té un índex intern del <span class=nomenc>0</span> al <span class="nomenc">3</span> i es pot citar cada element 
+dins del array de la seguent manera:</p>
+<img src="Imatges/fjavascript/img40.jpg" id="img40" alt="img40">
+<br>
+<h3 id="upd-element"><a href="#index">Update Elements</a></h3>
+<p>- Utilitzant les array i el seu índex, podem <span class=nomenc>canviar elements</span> individuals de la variable en qüestió:</p>
+<img src="Imatges/fjavascript/img41.jpg" id="img41" alt="img41">
+<br>
+<h3 id="arrays-let-const"><a href="#index">Arrays with let and const</a></h3>
+<p>Es poden assignar variables <span class=nomenc2>cont</span> i <span class="nomenc2">let</span> a arrays. Els elements de les <span class=nomenc>
+    arrays let</span> es poden modificar totalment, ja que la variable let es canviant. En canvi de les <span class=nomenc>arry const</span> 
+només es poden modificar certs elements ja que la variable const no es modificable.</p>
+<img src="Imatges/fjavascript/img42.jpg" id="img42" alt="img42">
+<p>Podem veure que en la variable <span class=nomenc2>const</span> es poden canviar alguns valors però no tots.</p>
+
+<h3 id="arrays-meth"><a href="#index">The .length() property</a></h3>
+<p>Serveix per saber quants elements hi ha en una array. S'escriu de la següent manera:</p>
+<p><span class=nomenc>console.log(nomVariable.length)</span></p>
+<img src="Imatges/fjavascript/img43.jpg" id="img43" alt="img43">
+
+<h3>The .push() method</h3>
+<p>Permet <span class=nomenc>afegir</span> items al <span class=nomenc>final</span> de l'array.</p>
+<img src="Imatges/fjavascript/img44.jpg" id="img44" alt="img44">
+
+<h3>The .pop() method</h3>
+<p><span class=nomenc>Elimina l'últim item</span> de l'array</p>
+<img src="Imatges/fjavascript/img45.jpg" id="img45" alt="img45">
+
+<h3>The .join() method</h3>
+<p><span class=nomenc>Uneix</span> tots els items de la array en una sola string</p>
+<img src="Imatges/fjavascript/img46.jpg" id="img46" alt="img46">
+
+<h3>The .slice() method</h3>
+<p>S'utilitza per <span class="nomenc">extreure una part</span>  de la array. Aquest mètode utilitza dos arguments, el primer és on vols iniciar el tall de l'array 
+aquest valor es veurà inclòs en el nou array, i on vols acabar el tall. Aquest últim item no es veurà inclós en el nou array.</p>
+<img src="Imatges/fjavascript/img47.jpg" id="img47" alt="img45">
+
+<h3>The .splice() method</h3>
+<p><span class=nomenc>Canvia el contingut</span> de l'array: eliminant, canviant o afegint elements.</p>
+<img src="Imatges/fjavascript/img48.jpg" id="img48" alt="img45">
+<p> En aquest codi podem veure com al <span class="nomenc">.slplice(2,1 'broquil')</span> li estem demanant amb el '2' que seleccioni el item 
+2 del array i amb el '1' que l'elimini i amb 'broquil', que l'item eliminat el substituïm per aquest nou item.</p>
+
+<h3>The .shift() method</h3>
+<p><span class=nomenc>Elimina el primer item</span> de l'array i el retorna, després si tornem a imprimir l'array original, el primer element no hi serà.</p>
+<img src="Imatges/fjavascript/img49.jpg" id="img49" alt="img45">
+
+<h3>The .unshift() method</h3>
+<p><span class="nomenc">Afageix</span> un o varis items al principi de l'array.</p>
+<img src="Imatges/fjavascript/img50.jpg" id="img50" alt="img45">
+<h3>The .concat() method</h3>
+<p>S'utilitza per <span class=nomenc>combinar</span> dos o més arrays.</p>
+<img src="Imatges/fjavascript/img51.jpg" id="img51" alt="img45">
+
+
+<h3 id="arrays-funct"><a href="#index">Arrays and functions</a></h3>
+<p>Podem passar les arrays a funcions per a facilitar el codi i poder aplicar calculs i modificar les arrays a travès de les funcions.</p>
+<img src="Imatges/fjavascript/img52.jpg" id="img52" alt="img52">
+
+<h3 id="nest"><a href="#index">Nested arrays</a></h3>
+<p>Podem tenir arrays dins altres arrays. Per accedir a les arrays emmagatzemades dins d'una altre podem utilitzar l'índex d'aquestes 
+per accedir als items:</p>
+<img src="Imatges/fjavascript/img53.jpg" id="img53" alt="img53">
+<p>Veiem que en la constant <span class=nomenc2>extreureNum</span> citem el item <span class=nomenc>[2]</span> que seria el 3er item ja que 
+l'index de les arrays començen per 0. I després citem l'item <span class=nomenc>[1]</span> que és el segon item de la array seleccionada anteriorment. 
+És a dir amb la primera citació hem seleccionat l'array sobre la que volem actuar i amb la segona el item en si que volem aïllar.</p>
+<br>
+
+<h2 id="loops"><a href="#index">Loops</a></h2>
+<h3 id="for-lop"><a href="#index">The For loop</a></h3>
+<p>Els loops ens permeten repetir un bloc de codi varies vegades sense haver-lo de tornar a escriure. L'estructura bàsica d'un 
+<span class="nomenc">loop "for"</span> és:</p>
+<p>1. <span class="nomenc">Inici</span>: Aquí s'estableix un punt de partida per al loop.</p>
+<p>2. <span class=nomenc>Condició</span>: Aquesta és la prova que s'avalua abans de que s'executi el loop. És a dir si la prova resulta verídica 
+el loop contínua, i si la prova resulta falsa el loop es para.</p>
+<p>3. <span class=nomenc>Iteració</span>: Actualitza el valor després de cada cicle.</p>
+<img src="Imatges/fjavascript/img54.jpg"id="img54" alt="img54">
+<p>En aquest codi li estem demanant que faci un comptador del 0 al 10.</p> 
+<p>podem veure que el <span class=nomenc>0</span> és l'<span class=nomenc>inici</span>, és a dir el punt de partida. Li estem demanant que començi 
+a comptar des de 0.</p> 
+<p>El <span class=nomenc>comptador < 11</span> és la <span class=nomenc>condició</span>, ja que si no continuaria comptant fins l'infinit o donaria 
+error.</p> 
+<p>I finalment el <span class=nomenc>comptador ++</span> és el que fa que sumi a cada actualització.</p>
+
+<h3 id="revers-lop"><a href="#index">Looping in reverse</a></h3>
+<img src="Imatges/fjavascript/img55.jpg"id="img55" alt="img55">
+<p>Per a què un loop funcioni al revès, nomes hem de canviar certs elements. Per començar li hem de dir que inici el compte en <span class=nomenc>
+10</span> o en el número que volem que comenci. Al apartat de la condició li hem d'indicar en el número que volem que acabi i en l'apartat de 
+la <span class=nomenc>itració</span> li hem de dir que resti ja que el que volem és que li tregui valors a 10 fins arribar a 0.</p>
+
+<h3 id="lop-arrays"><a href="#index">Looping through arrays</a></h3>
+<p>Els loops dins les arrays serveixen per a itinerar en els items d'aquesta. Sabem que les arrays emmagatzemen dades per tant en comptes de 
+    canviar o alterar aquestes dades utilitzem loops per organitzar-les o extreure un resultat determinat sense haver-ho de fer manual.</p>
+    <img src="Imatges/fjavascript/img56.jpg"id="img56" alt="img56">
+<p>Desglossem l'exemple anterior:</p>
+<p>- Tenim un array que es diu <span class="nomenc2">viatges </span> amb noms de destins.</p>
+<p>- Volem imprimir els destins però no volem fer un consol.log per a cada element per tant creem el bucle <span class=nomenc2>for</span>.</p>
+<p>- Dins el <span class=nomenc2>for</span> creem <span class=nomenc>l'inici</span> del loop, que és <span class=nomenc2>let i = 0</span>.
+Estem creant una variable <span class=nomenc2>i</span> i assignant-li el valor <span class=nomenc2>0</span>. Aquesta variable actuarà com a 
+<span class=nomenc>índex</span> que ens permetrà accedir a cada valor de la variable <span class=nomenc2>viatges</span>.</p>
+<p>- Seguim amb <span class="nomenc2"> i < viatges.length</span> aquí estem definint la <span class=nomenc>condició</span> per a que el loop 
+s'executi. És a dir el bucle seguirà executant-se sempre i quan <span class=nomenc2>i</span> sigui menor que la quantitat de items dins l'array, 
+és a dir 3. Com que el valor de <span class=nomenc2>i</span> és 0, començarà pel primer item de l'array.</p>
+<p>- L'element <span class=nomenc2>i++</span> és <span class=nomenc>l'actualització</span> del loop. És a dir li estem indicant que desprès 
+de cada repetició del loop li sumi <span class=nomenc2>1</span> al valor <span class=nomenc2>i</span>. Hem de tenir en compte que el loop 
+s'executà un cop, després un altre i així fins que es compleixi la condició. Tot hi que nosaltres veiem escrit el resultat tot junt, ell ho 
+executa un per un.</p>
+<p>- Finalment tenim <span class=nomen>console.log(viatges[i])</span> que seria el cos del bucle.</p>
+
+<h3 id="nested-lop"><a href="#index">Nested loops</a></h3>
+<p>És quan tenim un loop dins un altre loop. Pot servir per trobar elements o per classificar elements de diferents loops.</p>
+<img src="Imatges/fjavascript/img57.jpg"id="img57" alt="img57">
+<p>- En aquest exemple tenim dos llistes de seguidors, una per el Bob i l'altre per la Tina i volem trobar quins seguidors en comú tenen. L'última 
+array <span class=nomenc>seguidorsComuns = []</span> està buida ja que és on emmagatarem els seguidors comuns. La idea és comparar cada seguidor 
+del Bob i cada seguidor de la Tina, i si es troba alguna coincidencia, enviar-ho a la llista de comuns.</p>
+<p>- Per a fer-ho necessitem dos loops <span class=nomenc2>for</span>, el <span class=nomenc>loop extern</span> és <span class=nomenc>for (let i = 0; 
+    i < seguidorsBob.length; i++) {}</span>. Aquest loop recorre la llista de seguidors del Bob.</p>
+<p>- El <span class=nomenc>loop intern</span> és <span class=nomenc>for (let j = 0; j < seguidorsTina.length; j++) {}</span>. Aquest loop recorre 
+la llista de seguidors de la Tina.</p>
+<p>- La <span class=nomenc>condició</span> d'aquest cas és l'element <span class=nomenc2>if</span>. Li estem demanant que si algun seguidor del 
+Bob coincideix amb algun seguidor de la Tina, l'envii a la llista <span class=nomenc2>seguidorsComuns</span>.</p>
+
+<h3 id="while-lop"><a href="#index">The while loop</a></h3>
+<p>- Per entendre millor els loops <span class="nomenc2">while</span> el compararem amb els loops <span class=nomenc2>for</span>.</p>
+<img src="Imatges/fjavascript/img58.jpg" class="block7" alt="img58">
+<img src="Imatges/fjavascript/img59.jpg"class="block7" id = img59 alt="img59">
+<p>Desglossem el loop <span class=nomenc2>while</span>:</p>
+<p>- Abans d'iniciar el loop definim una variable <span class=nomenc>comptadorDos</span> i li donem el valor <span class=nomenc2>1</span>.</p>
+<p>- La <span class="nomenc">condició</span> és <span class=nomenc2>while</span> <span class=nomenc>(comptadorDos < 4)</span>. És a dir mentre 
+la condició es cumpleixi, el loop es seguirà executant.</p>
+<p>- Dins el <span class=nomenc>cos del while</span> es troba el loop. Primer mostrem el valor real de la variable 
+<span class=nomenc>console.log(comptadorDos)</span>. I després incrementem el valor de comptadorDos amb <span class=nomenc>comptadorDos ++</span>.</p>
+
+<h3 id="dowhi-stat"><a href="#index">Do ... While statements</a></h3>
+<p>L'utilitzem quan volem que el codi s'executi al menys una vegada i desprès que segueixi executant-se en base d'una condició. És a dir la 
+declaració <span class=nomenc2>Do ... While</span> indica que s'ha d'executar el loop fins que la condició no es compleixi. Quan la condició es 
+compleix, el loop s'acaba.</p>
+<img src="Imatges/fjavascript/img60.jpg" id = img60 alt="img60">
+<p>Desglossem l'exemple anterior:</p>
+<p>- Començem creant dues variables, una la <span class=nomenc>variable principal</span>, en aquest cas: <span class=nomenc>let comptador = ""</span>
+ i la segona la <span class=nomenc>variable auxiliar</span> que és <span class=nomenc>let i = 0</span>. La primera variable la deixem sense valor 
+ja que extreurem els valors del loop. La segona variable li donem el valor de 0 per què volem que el comptador començi en 0.</p>
+<p>- En aquest pas ja començem amb la declaració do ... while, que serà el <span class="nomenc">el cos del loop</span>.</p>
+
+<h3 id="break"><a href="#index">The break keyword</a></h3>
+<p>El <span class="nomenc2">break</span> s'utilitza per trencar el loop abans de que finalitzi si es compleix certa condició.</p>
+<img src="Imatges/fjavascript/img61.jpg" id = img61 alt="img61">
+<p>En aquest cas, trenquem el loop quan trobem un seient lliure per què ja hem complert el nostre objectiu.</p>
+<br>
+
+<h2 id="high-funtions"><a href="#index">High order functions</a></h2>
+<h3>Functions as data</h3>
+
+<table>
+    <tr> <!-- Row 1 -->
+      <th></th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+    <tr> <!-- Row 2 -->
+      <th>Morning</th>
+      <td rowspan="2">Work</td>
+      <td rowspan="3">Relax</td>
+    </tr>
+    <tr> <!-- Row 3 -->
+      <th>Afternoon</th>
+    </tr>
+    <tr> <!-- Row 4 -->
+      <th>Evening</th>
+      <td>Dinner</td>
+    </tr>
+  </table>
+  
+
+
+
+
+
+
+
+
+    <script src="scriptdos.js"></script>
+</body>
+</html>
